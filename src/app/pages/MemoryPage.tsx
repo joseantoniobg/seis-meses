@@ -305,8 +305,8 @@ const MemoryCard: React.FC<{ memory: Memory; rotationClass: string; animationInd
     // Animação de confete e estrelas ao virar
     if (isFlipped && !prevIsFlipped.current) {
         if (typeof confetti === 'function') {
-            confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 }, colors: ['#E0BBE4', '#D291BC', '#957DAD', '#FEC8D8', '#FFFFFF'] });
-            confetti({ particleCount: 50, spread: 120, startVelocity: 40, origin: { y: 0.5 }, shapes: ['star'], colors: ['#FFD700', '#FFC300', '#FFDA77', '#FFFFFF'] });
+            confetti({ particleCount: 80, spread: 60, origin: { y: 0.6 }, shapes: ['heart', 'star'], colors: ['#E0BBE4', '#D291BC', '#957DAD', '#FEC8D8', '#FFFFFF'] });
+            confetti({ particleCount: 50, spread: 120, startVelocity: 40, origin: { y: 0.5 }, shapes: ['heart', 'star'], colors: ['#FFD700', '#FFC300', '#FFDA77', '#FFFFFF'] });
         }
         cardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
@@ -378,9 +378,9 @@ const TimeCounter: React.FC = () => {
     return (
       <div className="text-center text-white">
         <h2 className="text-2xl md:text-3xl font-cursive mb-4 drop-shadow-lg">{title}</h2>
-        <div className="flex justify-center items-center space-x-2 md:space-x-4 flex-wrap">
+        <div className="flex justify-center items-center space-x-2 md:space-x-2 flex-wrap">
           {Object.entries(time).map(([unit, value]) => (
-            <div key={unit} className="flex flex-col items-center bg-white/30 backdrop-blur-sm p-3 rounded-lg shadow-md min-w-[70px] md:min-w-[90px]">
+            <div key={unit} className="flex flex-col items-center bg-white/30 backdrop-blur-sm p-2 rounded-lg shadow-md min-w-[50px] md:min-w-[70px]">
               <span className="text-2xl md:text-4xl font-bold">{String(value).padStart(2, '0')}</span>
               <span className="text-xs uppercase tracking-wider">{unitLabels[unit as keyof typeof unitLabels]}</span>
             </div>
