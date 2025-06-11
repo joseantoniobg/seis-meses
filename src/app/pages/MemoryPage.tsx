@@ -36,7 +36,7 @@ const initialMemories: Memory[] = [
   },
   {
     id: 2,
-    title: 'São Paulooooo...',
+    title: 'São Pauloooooo...',
     emoji: '🐙',
     imageUrl: './sao-paulo.jpg',
     description: 'Nossa primeira viagem de casal, e que viagem inesquecível! Cada momento com você foi único, e eu amei absolutamente tudo.',
