@@ -198,10 +198,10 @@ const DiceRollModal: React.FC<{ onFinish: (resultIndex: number) => void; maxNumb
                 >🎲</div>
             ))}
              <div className="relative w-48 h-48 flex items-center justify-center animate-dice-roll-container">
-                <svg viewBox="0 0 100 100" className={`absolute inset-0 w-full h-full text-white drop-shadow-xl transition-transform duration-300 ${isFinished ? 'animate-dice-land' : 'animate-dice-spin'}`}>
+                <svg viewBox="0 0 100 100" className={`absolute inset-0 w-full h-full text-white drop-shadow-xl transition-transform duration-350 ${isFinished ? 'animate-dice-land' : 'animate-dice-spin'}`}>
                     <polygon points="50,5 95,35 95,75 50,95 5,75 5,35" stroke="currentColor" strokeWidth="3" fill="rgba(255, 255, 255, 0.1)" />
                 </svg>
-                <div className={`absolute inset-0 flex items-center justify-center text-7xl font-bold text-white transition-transform duration-300 ${isFinished ? 'animate-number-reveal' : ''}`}>
+                <div className={`absolute inset-0 flex items-center justify-center text-7xl font-bold text-white transition-transform duration-350 ${isFinished ? 'animate-number-reveal' : ''}`}>
                     +{displayNumber}
                 </div>
             </div>
@@ -487,7 +487,7 @@ const MemoriesPage: NextPage = () => {
 
         @keyframes number-reveal {
             0% { transform: scale(1); }
-            50% { transform: scale(1.5); text-shadow: 0 0 25px #fff, 0 0 40px #FFD700; }
+            50% { transform: scale(1.8); text-shadow: 0 0 25px #fff, 0 0 40px #FFD700; }
             100% { transform: scale(1); }
         }
         .animate-number-reveal {
