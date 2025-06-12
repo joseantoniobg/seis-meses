@@ -156,7 +156,7 @@ const DiceRollModal: React.FC<{ onFinish: (resultIndex: number) => void; maxNumb
             const elapsedTime = Date.now() - startTime;
 
             if (elapsedTime >= totalDuration) {
-                setDisplayNumber(finalResultIndex.current + 1);
+                setDisplayNumber(Math.floor(Math.random() * 1000));
                 setIsFinished(true);
 
                 if (typeof confetti === 'function') {
@@ -202,7 +202,7 @@ const DiceRollModal: React.FC<{ onFinish: (resultIndex: number) => void; maxNumb
                     <polygon points="50,5 95,35 95,75 50,95 5,75 5,35" stroke="currentColor" strokeWidth="3" fill="rgba(255, 255, 255, 0.1)" />
                 </svg>
                 <div className={`absolute inset-0 flex items-center justify-center text-7xl font-bold text-white transition-transform duration-300 ${isFinished ? 'animate-number-reveal' : ''}`}>
-                    {displayNumber}
+                    +{displayNumber}
                 </div>
             </div>
         </div>
