@@ -156,7 +156,7 @@ const DiceRollModal: React.FC<{ onFinish: (resultIndex: number) => void; maxNumb
             const elapsedTime = Date.now() - startTime;
 
             if (elapsedTime >= totalDuration) {
-                setDisplayNumber(Math.floor(Math.random() * 1000));
+                setDisplayNumber(Math.floor(Math.random() * 100));
                 setIsFinished(true);
 
                 if (typeof confetti === 'function') {
@@ -174,7 +174,7 @@ const DiceRollModal: React.FC<{ onFinish: (resultIndex: number) => void; maxNumb
                     const remainingTime = totalDuration - elapsedTime;
                     delay = 50 + (1 - remainingTime / (totalDuration - slowDownPoint)) * 400;
                 }
-                setDisplayNumber(Math.floor(Math.random() * 10000) + 1);
+                setDisplayNumber(Math.floor(Math.random() * 100) + 1);
                 rollInterval = setTimeout(roll, delay);
             }
         };
