@@ -482,7 +482,7 @@ const MemoriesPage: NextPage = () => {
             to { transform: rotate(1080deg); }
         }
         .animate-dice-spin {
-            animation: dice-spin 2s linear;
+            animation: dice-spin 0s linear;
         }
 
         @keyframes number-reveal {
